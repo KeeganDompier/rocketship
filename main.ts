@@ -1,55 +1,5 @@
-info.onCountdownEnd(function () {
-    takeoff()
-})
-function takeoff () {
-    for (let index = 0; index < 5; index++) {
-        Rocket.ay += -10
-        pause(200)
-    }
-}
-let Rocket: Sprite = null
-effects.clouds.startScreenEffect(500)
-info.startCountdown(3)
-Rocket = sprites.create(img`
-. . . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . 1 1 . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . 1 1 1 1 1 1 . . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 1 1 1 1 1 1 1 . . . . . . . . . . . . 
-. . . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 2 2 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 2 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 2 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 2 2 2 2 2 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
-. . . . . . . . . . f f f f f f f f f f f f . . . . . . . . . . 
-. . . . . . . . . . . f f f f . . f f f f . . . . . . . . . . . 
-. . . . . . . . . . . 8 8 8 8 . . 8 8 8 8 . . . . . . . . . . . 
-. . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . 
-. . . . . . . . . . 4 4 4 4 4 4 4 4 4 4 4 4 . . . . . . . . . . 
-. . . . . . . . . . 5 5 5 5 5 5 5 5 5 5 5 5 . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-`, SpriteKind.Player)
-Rocket.setPosition(80, 100)
-scene.setBackgroundImage(img`
+function Background () {
+    scene.setBackgroundImage(img`
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
@@ -171,3 +121,65 @@ f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 `)
+}
+function Clouds () {
+    effects.clouds.startScreenEffect()
+}
+function Start_countdown () {
+    info.startCountdown(3)
+}
+function Rocketship () {
+    Rocket = sprites.create(img`
+. . . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . f f . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . 1 1 . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . 1 1 1 1 1 1 . . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 1 1 1 1 1 1 1 . . . . . . . . . . . . 
+. . . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 2 2 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 2 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 2 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 2 2 2 2 2 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 2 1 1 1 1 1 2 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 2 2 2 2 2 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . 1 1 1 1 1 1 1 1 1 1 1 1 . . . . . . . . . . 
+. . . . . . . . . . f f f f f f f f f f f f . . . . . . . . . . 
+. . . . . . . . . . . f f f f . . f f f f . . . . . . . . . . . 
+. . . . . . . . . . . 8 8 8 8 . . 8 8 8 8 . . . . . . . . . . . 
+. . . . . . . . . . . 2 2 2 2 2 2 2 2 2 2 . . . . . . . . . . . 
+. . . . . . . . . . 4 4 4 4 4 4 4 4 4 4 4 4 . . . . . . . . . . 
+. . . . . . . . . . 5 5 5 5 5 5 5 5 5 5 5 5 . . . . . . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+`, SpriteKind.Player)
+    Rocket.setPosition(80, 100)
+}
+info.onCountdownEnd(function () {
+    takeoff()
+})
+function takeoff () {
+    for (let index = 0; index < 5; index++) {
+        Rocket.ay += -10
+        pause(200)
+    }
+}
+let Rocket: Sprite = null
+Start_countdown()
+Rocketship()
+Clouds()
+Background()
